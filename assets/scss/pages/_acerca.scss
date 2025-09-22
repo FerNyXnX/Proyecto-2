@@ -1,0 +1,115 @@
+.main--acerca {
+  background: #fafbfc;
+}
+
+.about {
+  max-width: 900px;
+  margin: $espaciado-lg auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 10px rgba(25,72,170,.05);
+  padding: $espaciado-lg;
+  &__title {
+    font-size: 2em;
+    margin-bottom: $espaciado-sm;
+    color: $color-primario;
+    text-align: center;
+  }
+  &__intro {
+    text-align: center;
+    color: $color-texto;
+    margin-bottom: $espaciado-md;
+  }
+  &__values {
+    display: flex;
+    gap: $espaciado-md;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: $espaciado-lg;
+  }
+  &__card {
+    background: $color-gris-fondo;
+    border-radius: 6px;
+    flex: 1 1 250px;
+    min-width: 230px;
+    max-width: 350px;
+    padding: $espaciado-md;
+    margin-bottom: $espaciado-md;
+  }
+  &__card-title {
+    font-size: 1.2em; color: $color-primario;
+    font-weight: 700;
+    margin-bottom: $espaciado-xs;
+  }
+  &__values-list {
+    padding-left: 1.2em;
+    li { margin-bottom: .6em; }
+  }
+}
+
+.team__profile-list {
+  display: flex; gap: $espaciado-md;
+  flex-wrap: wrap; justify-content: center;
+  margin-bottom: $espaciado-lg;
+}
+.team__profile {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 1px 8px rgba(60, 90, 160, .12);
+  flex: 1 0 270px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column; align-items: center;
+  padding: $espaciado-md;
+  .team__photo {
+    width: 88px; height: 88px; border-radius: 50%;
+    margin-bottom: $espaciado-xs;
+    object-fit: cover;
+    border: 3.5px solid $color-primario;
+  }
+  .team__profile-body {
+    text-align: center;
+    .team__profile-name {
+      font-weight: 700; color: $color-primario;
+      margin-bottom: .12em; font-size: 1.14em;
+    }
+    .team__profile-role {
+      color: $color-secundario; font-size: .96em; margin-bottom: .14em;
+    }
+    .team__profile-bio {
+      font-size: .98em; color: $color-texto;
+    }
+  }
+}
+
+.portfolio {
+  max-width: 1130px;
+  margin: $espaciado-lg auto;
+  &__title {
+    text-align: center; font-size: 1.7em;
+    margin-bottom: $espaciado-md;
+    color: $color-primario;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    gap: $espaciado-md;
+  }
+  &__item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 10px rgba(60, 90, 160, .09);
+    display: flex; flex-direction: column;
+  }
+  &__image {
+    width: 100%; aspect-ratio: 16/8; object-fit: cover;
+  }
+  &__body {
+    padding: $espaciado-md;
+    h3 { font-weight: 700; color: $color-primario; }
+  }
+  &__description {
+    color: $color-texto; font-size: 1em;
+  }
+}

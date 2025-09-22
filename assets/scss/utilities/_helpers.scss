@@ -1,0 +1,19 @@
+// Utilidades accesibles
+.u-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 1000;
+  background: $color-primario;
+  color: #fff;
+  padding: $espaciado-xs $espaciado-sm;
+  &:focus {
+    left: 8px;
+    top: 8px;
+    width: auto;
+    height: auto;
+  }
+}

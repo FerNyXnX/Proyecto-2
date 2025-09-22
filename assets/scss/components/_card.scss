@@ -1,0 +1,40 @@
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(34, 42, 54, .07);
+  overflow: hidden;
+  max-width: 360px;
+  margin: 0 auto;
+  &__image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    background: $color-gris-fondo;
+  }
+  &__body {
+    padding: $espaciado-sm $espaciado-md;
+  }
+  &__title {
+    font-size: 1.22em;
+    margin: 0;
+    color: $color-primario;
+    font-weight: 600;
+    margin-bottom: $espaciado-xs;
+  }
+  &__description {
+    color: $color-texto;
+    font-size: 1em;
+  }
+}
+
+.features__card,
+.team__profile {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease-out;
+}
+
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

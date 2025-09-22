@@ -1,0 +1,4 @@
+// Función para oscurecer color
+@function darken-color($color, $amount: 10%) {
+  @return darken($color, $amount);
+}

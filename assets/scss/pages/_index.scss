@@ -1,0 +1,164 @@
+.hero {
+  background: linear-gradient(120deg, #e8f0fe 0%, #fff 100%);
+  padding: $espaciado-lg 0 $espaciado-lg 0;
+  text-align: center;
+  &__title {
+    font-size: 2.5em;
+    color: $color-primario;
+    margin-bottom: $espaciado-sm;
+    font-weight: 800;
+  }
+  &__subtitle {
+    color: #466089;
+    font-size: 1.3em;
+    margin-bottom: $espaciado-md;
+  }
+  &__cta {
+    margin-top: $espaciado-sm;
+  }
+}
+
+.features {
+  max-width: 1200px;
+  margin: $espaciado-lg auto;
+  &__list {
+    display: flex;
+    gap: $espaciado-md;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px rgba(25,72,170,.08);
+    flex-basis: 32%;
+    padding: $espaciado-md;
+  }
+  &__title {
+    color: $color-primario;
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-bottom: $espaciado-xs;
+  }
+  &__description {
+    color: $color-texto;
+  }
+}
+
+.services {
+  background: $color-gris-fondo;
+  padding: $espaciado-lg 0;
+  &__title {
+    text-align: center;
+    margin-bottom: $espaciado-md;
+    color: $color-primario;
+    text-wrap: balance;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $espaciado-md;
+    max-width: 1130px;
+    margin: 0 auto;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.team {
+  margin: $espaciado-lg auto;
+  max-width: 900px;
+  &__title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: $espaciado-md;
+    color: $color-primario;
+  }
+}
+
+// Nueva grilla de perfiles
+.team__profile-list {
+  display: flex;
+  gap: $espaciado-md;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: $espaciado-md;
+}
+
+.team__profile {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 1px 8px rgba(60, 90, 160, .12);
+  flex: 1 0 270px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $espaciado-md;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp .6s ease forwards;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 4px 14px rgba(60, 90, 160, .18);
+    transition: transform .25s, box-shadow .25s;
+  }
+
+  .team__photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    margin-bottom: $espaciado-xs;
+    object-fit: cover;
+    border: 3.5px solid $color-primario;
+  }
+
+  .team__profile-name {
+    font-weight: 700;
+    color: $color-primario;
+    margin-bottom: .12em;
+    font-size: 1.14em;
+  }
+
+  .team__profile-role {
+    color: $color-secundario;
+    font-size: .96em;
+    margin-bottom: .14em;
+  }
+
+  .team__profile-bio {
+    font-size: .95em;
+    color: $color-texto;
+  }
+}
+
+// Animación
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsividad
+@include respond-to(md) {
+  .features__list {
+    flex-direction: column;
+    gap: $espaciado-sm;
+  }
+  .hero__title {
+    font-size: 2em;
+  }
+  .team__profile-list {
+    flex-direction: column;
+    align-items: center;
+    gap: $espaciado-sm;
+  }
+  .team__profile {
+    max-width: 100%;
+  }
+}

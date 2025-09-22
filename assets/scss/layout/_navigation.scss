@@ -1,0 +1,43 @@
+.nav {
+  &__list {
+    display: flex;
+    gap: $espaciado-md;
+  }
+
+  &__item {
+    display: inline-block;
+    margin: 0;
+  }
+
+  &__link {
+    color: $color-texto;
+    font-weight: 500;
+    font-size: 1.05em;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    padding: $espaciado-xs 0;
+    transition: border-bottom .22s, color .19s;
+
+    &:hover,
+    &:focus {
+      color: $color-primario;
+      border-bottom: 3px solid $color-primario;
+      outline: none;
+    }
+
+    &--active,
+    &[aria-current="page"] {
+      color: $color-primario;
+      border-bottom: 3px solid $color-primario;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}
+
+@include respond-to(sm) {
+  .nav__list {
+    flex-direction: column;
+    gap: $espaciado-sm;
+  }
+}
